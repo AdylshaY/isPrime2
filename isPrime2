@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        boolean isPrime = true;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int number = input.nextInt();
+
+        if (number<2){
+            System.out.println("The smallest prime number is 2");
+            return;
+        }
+        for (int i=2; i<number; i++){
+            if (number % i == 0){
+                isPrime = false;
+            }
+        }
+        if (isPrime){                   // if{isPrime) --> if(isPrime == true)
+            System.out.println(number + " Is Prime.");
+        } else {
+            System.out.println(number + " Isn't Prime.");
+        }
+
+    }
+}
